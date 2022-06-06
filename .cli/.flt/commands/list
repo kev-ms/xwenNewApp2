@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# name: list
+# short: List clusters in the fleet
+
+cat /workspaces/gitops/ips | sort

@@ -1,0 +1,16 @@
+###
+# flt az commands
+###
+
+command
+	name: az
+	short: Azure CLI commands (customized)
+
+boaCommand
+	path: az/groups
+
+boaCommand
+	path: az/login
+
+boaCommand
+	path: az/logout
