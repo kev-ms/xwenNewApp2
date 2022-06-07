@@ -31,4 +31,4 @@ jobs:
         ghcr.io/retaildevcrews/autogitops:0.4.1 \
         -r xwen11/PIBXWEN \
         -b pib \
-        -p ${{ secrets.GHCR_PAT }}
+        -p ${{ secrets.XWEN_PAT }}
