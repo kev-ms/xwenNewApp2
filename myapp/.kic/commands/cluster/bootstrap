@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# name: bootstrap
+# short: Deploy monitoring and logging
+
+# change to this directory
+#cd "$(dirname "${BASH_SOURCE[0]}")" || exit
+
+kubectl apply -f "$REPO_BASE/myapp/deploy"
+kubectl apply -f "$REPO_BASE/myapp/deploy/bootstrap"
+kubectl apply -R -f "$REPO_BASE/myapp/deploy/bootstrap"

@@ -1,0 +1,19 @@
+{
+    "args": [],
+    "cpuLimit": "1000m",
+    "cpuRequest": "400m",
+    "imageName": "ghcr.io/retaildevcrews/myapp",
+    "imageTag": "latest",
+    "livenessProbe": "/healthz",
+    "memoryLimit": "128Mi",
+    "memoryRequest": "64Mi",
+    "name": "myapp",
+    "namespace": "myapp",
+    "nodePort": 30080,
+    "port": 8080,
+    "readinessProbe": "/readyz",
+    "targetDir": "apps",
+    "targets": [
+        "pibtt"
+    ]
+}

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#name: app
+#short: Build and deploy the app to the local cluster
+
+# change to this directory
+#cd "$(dirname "${BASH_SOURCE[0]}")" || exit
+
+cd "$REPO_BASE/myapp" || exit
+
+# delete local deployment
+kubectl delete -f deploy/app --ignore-not-found=true --wait=false
+
+kic build app
+
+# deploy local app and re-deploy webv
+kubectl apply -f deploy
+kubectl apply -f deploy/app --wait=false
